@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <header class="flex justify-center py-8">
+      <h1 class="text-3xl tracking-tight text-gray-900 sm:text-6xl">
+        Guess the number
+      </h1>
+    </header>
+    <main
+      class="h-4/5 bg-white py-24 flex flex-col items-center justify-center"
+    >
+      <!-- Start -->
+      <div
+        id="start"
+        class="start-container mx-auto flex flex-col max-w-md gap-y-4 w-fit"
+      >
+        <p class="text-base text-black">
+          The application will generate a random number, and your task is to
+          find it in as few attempts as possible.
+        </p>
+        <button
+          type="submit"
+          class="btn-start w-fit rounded-md bg-black px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Start
+        </button>
+      </div>
+      <!-- Start -->
+      <!-- Guess the number -->
+      <div
+        id="guess"
+        class="guess hidden mx-auto flex-col max-w-md gap-y-8 w-fit"
+      >
+        <p class="text-base text-black">
+          I generated a number between 0 and 500, try to find it 😆
+        </p>
+        <p class="text-base text-black place-self-end">
+          Score : <span class="guess__score">0</span>
+        </p>
+        <form id="myForm" class="guess__form flex flex-col gap-y-1.5">
+          <label class="block text-black text-sm" for="number">
+            Your guess
+          </label>
+          <div class="flex gap-x-2">
+            <input
+              class="shadow appearance-none border border-gray-500 rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline"
+              id="number"
+              type="number"
+              name="number"
+              value="100"
+            />
+            <button
+              type="submit"
+              class="btn-start w-fit rounded-md bg-black px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Submit
+            </button>
+          </div>
+          <p class="text-sm text-gray-500">Enter your guessing number</p>
+        </form>
+        <p class="guess__message"></p>
+        <div
+          class="guess__result relative w-full h-11 border border-gray-500 rounded"
+        ></div>
+        <button
+          type="button"
+          class="hidden guess__replay btn-start place-self-center w-fit rounded-md bg-black px-4 py-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          Replay
+        </button>
+      </div>
+      <!-- Guess the number -->
+    </main>
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base/_fonts.scss";
+@import "./base";
+
+body {
+  height: 100vh;
+}
+
+/* button {
+  @apply flex justify-center rounded-md bg-black px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black;
+} */
+
+input {
+  @apply flex h-10 w-full rounded-md border border-neutral-400 bg-neutral-50 px-3 py-2 text-sm ring-offset-neutral-50 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.guess {
+  &__result {
+    &:before {
+      content: "0";
+      position: absolute;
+      bottom: -25px;
+    }
+
+    &:after {
+      content: "500";
+      position: absolute;
+      bottom: -25px;
+      right: 0;
+    }
+  }
+}
